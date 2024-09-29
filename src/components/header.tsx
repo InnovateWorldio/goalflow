@@ -36,14 +36,14 @@ export function Header() {
   };
 
   const navItems = [
-    { id: "features", label: "Features" },
     { id: "impact", label: "Impact" },
+    { id: "features", label: "Features" },
     { id: "philosophy", label: "Philosophy" },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="max-w-7xl mx-auto flex h-14 items-center justify-between">
+      <div className="max-w-7xl mx-auto flex px-4 sm:px-6 md:px-8 h-14 items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
           <GitFork className="h-6 w-6" />
           <span className="font-bold hidden sm:inline">GoalFlow</span>

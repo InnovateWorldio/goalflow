@@ -7,6 +7,7 @@ import { Impact } from '@/components/impact';
 import { Philosophy } from '@/components/philosophy';
 import { ReactFlowComponent } from '@/components/react-flow';
 import { Footer } from '@/components/footer';
+import DotPattern from '@/components/ui/dot-pattern';
 ---
 <script is:inline>
 	const getThemePreference = () => {
@@ -27,13 +28,18 @@ import { Footer } from '@/components/footer';
 	}
 </script>
 <Layout title="GoalFlow - Automate Your Success">
-  <Header client:load />
-  <main>
-    <Hero client:load />
-    <Features client:load />
-    <Impact client:load />
-    <Philosophy />
-    <ReactFlowComponent client:load />
-  </main>
-  <Footer />
+  <div class="relative min-h-screen">
+    <DotPattern className="absolute inset-0 z-0" />
+    <div class="relative z-10">
+      <Header client:load />
+      <main>
+        <Hero client:load />
+		<Impact client:load />
+		<ReactFlowComponent client:load />
+        <Features client:load />
+        <Philosophy />
+      </main>
+      <Footer />
+    </div>
+  </div>
 </Layout>

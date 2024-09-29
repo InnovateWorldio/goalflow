@@ -7,20 +7,211 @@ import {
   useNodesState,
   useEdgesState,
   addEdge,
+  type Node,
+  type Edge,
+  Position,
 } from "@xyflow/react";
 
-const styles = {
-  width: "100%",
-  height: 300,
+import "@xyflow/react/dist/style.css";
+import { AnimatedSVGEdge } from "./animated-svg-edge";
+
+// Add this import at the top of your file
+import styles from "./ReactFlow.module.css";
+
+const initialNodes: Node[] = [
+  // Inputs
+  {
+    id: "A",
+    sourcePosition: Position.Right,
+    type: "input",
+    data: { label: "Unified Platform" },
+    position: { x: 0, y: 0 },
+  },
+  {
+    id: "B",
+    sourcePosition: Position.Right,
+    type: "input",
+    data: { label: "Organizational Workspace Template" },
+    position: { x: 0, y: 100 },
+  },
+  {
+    id: "C",
+    sourcePosition: Position.Right,
+    type: "input",
+    data: { label: "Advanced AI Integration" },
+    position: { x: 0, y: 200 },
+  },
+  {
+    id: "D",
+    sourcePosition: Position.Right,
+    type: "input",
+    data: { label: "Customization and Flexibility" },
+    position: { x: 0, y: 300 },
+  },
+  {
+    id: "E",
+    sourcePosition: Position.Right,
+    type: "input",
+    data: { label: "Vectorization of Data" },
+    position: { x: 0, y: 400 },
+  },
+  {
+    id: "F",
+    sourcePosition: Position.Right,
+    type: "input",
+    data: { label: "Process Visualization Tools" },
+    position: { x: 0, y: 500 },
+  },
+  {
+    id: "G",
+    sourcePosition: Position.Right,
+    type: "input",
+    data: { label: "Multiple Views and Templates" },
+    position: { x: 0, y: 600 },
+  },
+
+  // Outputs
+  {
+    id: "H",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Reduction in Tool Requirements" },
+    position: { x: 400, y: 0 },
+  },
+  {
+    id: "I",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Centralized Data Repository" },
+    position: { x: 400, y: 100 },
+  },
+  {
+    id: "J",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Reduced Configuration Time" },
+    position: { x: 400, y: 200 },
+  },
+  {
+    id: "K",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Enhanced Information Retrieval" },
+    position: { x: 400, y: 300 },
+  },
+  {
+    id: "L",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Improved Process Management" },
+    position: { x: 400, y: 400 },
+  },
+  {
+    id: "M",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Increased Customization" },
+    position: { x: 400, y: 500 },
+  },
+  {
+    id: "N",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "AI-Assisted Workflow Management" },
+    position: { x: 400, y: 600 },
+  },
+
+  // Outcomes
+  {
+    id: "O",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Time Savings" },
+    position: { x: 800, y: 100 },
+  },
+  {
+    id: "P",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Cost Savings" },
+    position: { x: 800, y: 200 },
+  },
+  {
+    id: "Q",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Increased Productivity" },
+    position: { x: 800, y: 300 },
+  },
+  {
+    id: "R",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Enhanced Efficiency" },
+    position: { x: 800, y: 400 },
+  },
+  {
+    id: "S",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Improved Organizational Alignment" },
+    position: { x: 800, y: 500 },
+  },
+  {
+    id: "T",
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+    data: { label: "Scalability and Adaptability" },
+    position: { x: 800, y: 600 },
+  },
+
+  // Goal
+  {
+    id: "U",
+    targetPosition: Position.Left,
+    data: { label: "Maximize Impact on Wellbeing" },
+    position: { x: 1200, y: 300 },
+  },
+];
+
+const initialEdges: Edge[] = [
+  // Connections from Inputs to Outputs
+  { id: "e-A-H", source: "A", target: "H", type: "bezier", animated: true },
+  { id: "e-A-I", source: "A", target: "I", type: "bezier", animated: true },
+  { id: "e-B-J", source: "B", target: "J", type: "bezier", animated: true },
+  { id: "e-C-N", source: "C", target: "N", type: "bezier", animated: true },
+  { id: "e-D-M", source: "D", target: "M", type: "bezier", animated: true },
+  { id: "e-E-K", source: "E", target: "K", type: "bezier", animated: true },
+  { id: "e-F-L", source: "F", target: "L", type: "bezier", animated: true },
+  { id: "e-G-M", source: "G", target: "M", type: "bezier", animated: true },
+
+  // Connections from Outputs to Outcomes
+  { id: "e-H-O", source: "H", target: "O", type: "bezier", animated: true },
+  { id: "e-H-P", source: "H", target: "P", type: "bezier", animated: true },
+  { id: "e-I-Q", source: "I", target: "Q", type: "bezier", animated: true },
+  { id: "e-J-O", source: "J", target: "O", type: "bezier", animated: true },
+  { id: "e-K-Q", source: "K", target: "Q", type: "bezier", animated: true },
+  { id: "e-L-R", source: "L", target: "R", type: "bezier", animated: true },
+  { id: "e-M-S", source: "M", target: "S", type: "bezier", animated: true },
+  { id: "e-N-Q", source: "N", target: "Q", type: "bezier", animated: true },
+
+  // Connections from Outcomes to Goal
+  { id: "e-O-U", source: "O", target: "U", type: "bezier", animated: true },
+  { id: "e-P-U", source: "P", target: "U", type: "bezier", animated: true },
+  { id: "e-Q-U", source: "Q", target: "U", type: "bezier", animated: true },
+  { id: "e-R-U", source: "R", target: "U", type: "bezier", animated: true },
+  { id: "e-S-U", source: "S", target: "U", type: "bezier", animated: true },
+  { id: "e-T-U", source: "T", target: "U", type: "bezier", animated: true },
+];
+
+const edgeTypes = {
+  animatedSvg: AnimatedSVGEdge,
 };
 
-import "@xyflow/react/dist/style.css";
-
-const initialNodes = [
-  { id: "1", position: { x: 0, y: 0 }, data: { label: "1" } },
-  { id: "2", position: { x: 0, y: 100 }, data: { label: "2" } },
-];
-const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
+const reactFlowStyles = {
+  width: "100%",
+  height: 800,
+};
 
 export function ReactFlowComponent() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
@@ -32,14 +223,20 @@ export function ReactFlowComponent() {
   );
 
   return (
-    <div style={styles}>
+    <div style={reactFlowStyles} className={styles.reactFlowWrapper}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        fitView
+        minZoom={0.5}
+        maxZoom={2}
+        defaultViewport={{ x: 0, y: 0, zoom: 0.7 }}
+        attributionPosition="bottom-left"
       >
+        <Controls />
         <Background gap={12} size={1} />
       </ReactFlow>
     </div>

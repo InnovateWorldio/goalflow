@@ -30,8 +30,8 @@ export function DotPattern({
     <svg
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80",
-        className,
+        "pointer-events-none h-full w-full fill-neutral-400/80",
+        className
       )}
       {...props}
     >
@@ -41,7 +41,6 @@ export function DotPattern({
           width={width}
           height={height}
           patternUnits="userSpaceOnUse"
-          patternContentUnits="userSpaceOnUse"
           x={x}
           y={y}
         >

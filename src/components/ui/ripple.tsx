@@ -1,4 +1,5 @@
-import { memo } from "react";
+import React, { type CSSProperties } from "react";
+
 import { cn } from "@/lib/utils";
 
 interface RippleProps {
@@ -8,7 +9,7 @@ interface RippleProps {
   className?: string;
 }
 
-const Ripple = memo(function Ripple({
+const Ripple = React.memo(function Ripple({
   mainCircleSize = 210,
   mainCircleOpacity = 0.24,
   numCircles = 8,
@@ -22,7 +23,7 @@ const Ripple = memo(function Ripple({
       )}
     >
       {Array.from({ length: numCircles }, (_, i) => {
-        const size = mainCircleSize + i * 70;
+        const size = `${mainCircleSize + i * 70}px`;
         const opacity = mainCircleOpacity - i * 0.03;
         const animationDelay = `${i * 0.06}s`;
         const borderStyle = i === numCircles - 1 ? "dashed" : "solid";
@@ -32,18 +33,22 @@ const Ripple = memo(function Ripple({
           <div
             key={i}
             className={`absolute animate-ripple rounded-full bg-foreground/25 shadow-xl border [--i:${i}]`}
-            style={{
-              width: `${size}px`,
-              height: `${size}px`,
-              opacity,
-              animationDelay,
-              borderStyle,
-              borderWidth: "1px",
-              borderColor: `hsl(var(--foreground), ${borderOpacity / 100})`,
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%) scale(1)",
-            }}
+            style={
+              {
+                width: size,
+                height: size,
+                maxWidth: "100vw",
+                maxHeight: "100vh",
+                opacity,
+                animationDelay,
+                borderStyle,
+                borderWidth: "1px",
+                borderColor: `hsl(var(--foreground), ${borderOpacity / 100})`,
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%) scale(1)",
+              } as CSSProperties
+            }
           />
         );
       })}

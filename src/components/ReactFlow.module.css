@@ -1,0 +1,39 @@
+.reactFlowWrapper {
+  --bg-color: #f8f8f8;
+  --text-color: #000;
+  --node-border-color: #1a192b;
+  --node-color: #fff;
+  --edge-color: #1a192b;
+}
+
+:global(.dark) .reactFlowWrapper {
+  --bg-color: #020817;
+  --text-color: #0ad4f2; /* blue-500 */
+  --node-border-color: #3b82f6; /* purple-500 */
+  --node-color: #020817; /* gray-600 */
+  --edge-color: #3b82f6; /* purple-500 */
+}
+
+.reactFlowWrapper :global(.react-flow__node) {
+  background-color: var(--node-color);
+  color: var(--text-color);
+  border-color: var(--node-border-color);
+}
+
+.reactFlowWrapper :global(.react-flow__edge path) {
+  stroke: var(--edge-color);
+}
+
+.reactFlowWrapper :global(.react-flow__background) {
+  background-color: var(--bg-color);
+}
+
+.reactFlowWrapper :global(.react-flow__controls) {
+  background-color: var(--bg-color);
+}
+
+.reactFlowWrapper :global(.react-flow__controls button) {
+  background-color: var(--node-color);
+  color: var(--text-color);
+  border-color: var(--node-border-color);
+}
