@@ -1,0 +1,40 @@
+---
+title: Proposal
+---
+
+import { ProposalComponent } from "@/components/docs/proposal";
+
+<ProposalComponent
+  organizationName="InnovateWorld"
+  totalBudget="$,000 USD"
+  grantSize="$50,000 USD"
+  grantRatio="~66% of budget"
+  countriesOfOperation="UK - Registered charity"
+  dateOfGrant="July 2024"
+  duration="July 2024-July 2025"
+  description="In the last two years, Effective Giving has taken off in the Effective Altruism movement with several recent organizations reaching major milestones and many moving significantly more money than they spend counterfactually (see e.g. here <insert link>). However there are still major communities without a major effective giving presence. As far as we know, no major targeting has occurred aiming at the British magical community. This is despite some members of the community having significant wealth and fame. As a student of Hogwarts in their senior year (LinkedIn profile or CV link), I feel I am well placed to bring the concepts of effective giving to the British magical community to leverage their altruism and funds for making a massive difference for sentient beings, magical or not."
+  smartGoals={[
+    "Reach at least 3 high net worth witches/wizards that donate $10k or more to effective charities.",
+    "Get individual donations from at least 30 different members of the Hogwarts community, at least 3 of whom are staff.",
+    "Move in total $100,000 USD to effective charities from new donors (as counterfactually assessed using a methodology similar to the GWWC post).",
+  ]}
+  measurementPlan="I plan to track all the donors in a spreadsheet based on a year-end survey I send to them. Our advisory board will review the survey to make sure it does not create social desirability bias. I will also try to put an estimated counterfactual number on each donation by consulting with existing Effective Giving organizations how they do it to make sure we do not overestimate our actual counterfactual impact."
+  shutdownCriteria="If we do not hit 80%+ of OKRs or if me (Jane) is offered a high value counterfactual job after graduating. Hitting a counterfactual ratio of above 1:1 in the first year and above 1:3 in our 2nd year."
+  progressSoFar={[
+    "I have set up a brand and website (link) (link).",
+    "I ran one event last year that had 30 people attend and three people made donations to effective charities at the end (one of which was a professor) (link).",
+    "I have got 4 advisors on board to support this project (two from the wizarding world and two from the Effective Giving community).",
+  ]}
+  oneYearPlan="The current plan is to host 6 Effective Giving-related events over the year, and to run a monthly newsletter which people can sign up to. I also plan to attend our yearly career fair and take part in a one month student swap during the Triwizard Tournament. I plan to try to get two of my newsletters shared in the school newspaper and put up posters for each event across the school (only in places we are legally allowed to place posters). I also plan to look for a co-founder (the plan is to hire for the 2nd half of the year) who can help support this project. I have a few candidates in mind (e.g., LinkedIn link 1, LinkedIn link 2), but I would like to test them out in a volunteer capacity before determining if we work well enough together long-term."
+  biggestSuccess="Last year the event I ran (see above) was likely the biggest success. Attendees rated it a 5.2/5.86 and I feel (although I did not measure) that it made attendees move significantly more money to effective charities even later."
+  biggestFailures="I tried to get funding for this project from the three largest funders in the space and they were each skeptical that the wizarding world was an ideal target market."
+  supportingDocuments={[
+    { name: "Budget", link: "#" },
+    { name: "One-year review", link: "#" },
+    { name: "Five-year vision", link: "#" },
+  ]}
+  extraInformation={[
+    "If possible, if we could receive any donations via Gringotts that would allow for easier spending without needing to pay conversion fees.",
+    "I think I will be able to fundraise our full budget if Meta Charity Funders cover this portion from a personal contact I have (but they want to see that other funders think this project is promising first).",
+  ]}
+/>
