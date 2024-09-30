@@ -210,7 +210,7 @@ const edgeTypes = {
 
 const reactFlowStyles = {
   width: "100%",
-  height: 800,
+  height: 500,
 };
 
 export function ReactFlowComponent() {
