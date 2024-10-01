@@ -1,6 +1,6 @@
 ---
-title: About Me
-description: About Me
+title: Why this? Why now? Why not before?
+description: Why this? Why now? Why not before?
 ---
 
 ## Summary
