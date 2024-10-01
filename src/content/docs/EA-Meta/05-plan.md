@@ -9,7 +9,9 @@ The following is a high level plan for the development and release of GoalFlow.
 
 The information below is a grouping of many feature sets and will not necessarily be developed in the order listed.
 
-In order to maximize productivity
+I have also purposly overestimated the time it will take to develop each feature to account for the unknowns and to ensure I have enough runway to continue development and respond to any feedback.
+
+In order to maximize productivity I'll
 
 - Develop the core data models and functions to work with the data first
 - Develop the UI and UX for the workspaces, navigation, and tables to interact with the data
