@@ -3,7 +3,9 @@ title: GoalFlow
 description: GoalFlow
 ---
 
-GoalFlow is designed to be a single application that can replace multiple apps with in one while providing a set of additional features used to help users achieve their goals faster, easier, at lower cost, and with less risk.
+GoalFlow is designed to be a single application that can replace multiple common apps within one single app while providing sets of additional features used to help users achieve their goals faster, easier, at lower cost, and with less risk.
+
+Beyond most traditional personal and org use cases, GoalFlow has the capability to be used as an App Builder expanding its use cases. Some of these additional use cases are listed in the [Use Cases](/content/docs/EA-Meta/02-use-cases.md) section.
 
 Below is a subset of the features that GoalFlow will provide:
 
@@ -14,19 +16,19 @@ Below is a subset of the features that GoalFlow will provide:
 The base of the platform is build on top of:
 
 - lists
-- list items (allowing a single items collection/table to be used for multiple purposes via item types)
+- items (using a single items collection/table to be used for multiple purposes via item types)
 - standard fields (a common set of fields associated will all items)
 - custom fields (allowing different item types to have different fields)
-- lists views (tables, kanban, gannt, cards, roadmaps, calendar, bpmn)
-- forms
+- lists views (tables, kanban, gannt, cards, roadmaps, calendar, bpmn, etc)
+- dynamic forms (allowing the creation of custom forms for different item types)
 - documents (notes, wiki, diagrams, files)
-- navigation items (pages,spaces, folders, lists, docs)
-- workspaces (projects, teams, organizations, communities)
+- workspaces (individuals, organizations, communities)
+- navigation items (pages, spaces, folders, lists, docs) used to structure workspaces
 - roles and permissions (set on workspace, navigation items, etc)
 
 ### ERP Modules
 
-These base features are able to be combined to create sets of modules that are associated with ERP (Enterprise Resource Planning) Systems such as:
+These base features are able to be combined to create sets of modules that are commonly associated with ERP (Enterprise Resource Planning) Systems such as:
 
 - Financial Management
   - General Ledger management
@@ -37,7 +39,7 @@ These base features are able to be combined to create sets of modules that are a
   - Tax Management and Compliance
 - Human Resources (HR) Management
   - Employee Data Management
-  - Payroll Processing
+  - Payroll Processing (this system will not handle the actual payment processing, just the data and integration with other systems)
   - Recruitment and Onboarding
   - Time and Attendance Tracking
   - Performance Management
@@ -60,8 +62,8 @@ These base features are able to be combined to create sets of modules that are a
   - Customer Service and Support
   - Pricing and Discount Management
   - Contract and Subscription Management
-- Project Management
-  - Project Planning and Scheduling
+- Portfolio Item Management (Projects, Products, Services, Campaigns, Initiatives, etc)
+  - Planning and Scheduling
   - Resource Allocation
   - Budgeting and Cost Control
   - Progress Tracking and Reporting
@@ -69,7 +71,7 @@ These base features are able to be combined to create sets of modules that are a
 - Customer Service and Support
   - Help Desk Management
   - Service Request Tracking
-  - Knowledge Base Management
+  - Support Knowledge Base Management
   - Field Service Management
 - Business Intelligence (BI) and Analytics
   - Data Collection and Integration
@@ -109,6 +111,7 @@ The general navigation items of the default workspace are:
   - Products: List
   - Services: List
   - Campaigns: List
+  - Initiatives: List
 - Life/Work Administration: Folder
   - Here is were a set of the ERP modules will be created.
 - Wellbeing: Folder
@@ -221,7 +224,9 @@ These are structured as:
   - Actions are the steps that are taken in a workflow in an activity.
   - The work the following:
     - receive inputs generally from a previous node,
+    - validate the inputs
     - process the inputs using a Tool (the equivalent of a function in a programming language)
+    - validate the outputs
     - produce outputs which may be used by subsequent nodes.
 - Mappings
   - Mappings are used to map the received inputs to the appropriate Tool and map the outputs (response) from the Tool to the appropriate subsequent node.
@@ -270,7 +275,7 @@ These are the core knowledge artifacts that are used to create a knowledge base.
 
 AI Knowledge Generation Agents are AI agents that are designed to generate knowledge in a workspace.
 
-They help to reduce the time it takes to create a new knowledge item in a workspace by automatically populating the knowledge item with the appropriate fields.
+They help to reduce the time it takes to create a new knowledge item in a workspace by automatically populating the knowledge item with the appropriate data.
 
 ### Internal Knowledge Access
 
@@ -287,6 +292,7 @@ They are able to access information from external sources such as:
 - Web Pages
 - APIs
 - RSS Feeds
+- Other
 
 ## Additional Feature
 
@@ -297,6 +303,7 @@ Many additional features will be built on top of the platform such as:
 - Accessing Web Apps as Tools within Workflows
 - Automating Web Apps Activities within Workflows
 - Accessing OS Tools by using the display information to determine clicks to automate and entering text to automate typing.
+- App building
 
 Much more!
 
@@ -311,7 +318,7 @@ Each of their goals can be aligned starting with their philosophy all the way do
 - The collaborative templates library helps to ensure that the users can find the workflows appropriate for each use case.
 - The automations help to ensure that the workflows are able to be executed quickly and efficiently.
 - The knowledge management system helps to ensure that the users can access the information they need to achieve their goals.
-- The AI Agents help with everything from generating items, to generating workflows, to generating knowledge, to generating external content.
+- The AI Agents help with everything from generating items, to generating workflows, to generating knowledge, to generating external content, to automating everything.
 
 These benefits are only the start and lead to additional benefits such as:
 

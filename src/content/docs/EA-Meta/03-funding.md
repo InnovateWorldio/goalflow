@@ -83,7 +83,7 @@ The summary of my track record is the following:
   - Risk management.
   - Customer support.
   - Team management.
-- Prior to that I worked as for a company for almost 8 years where I simultaneously fullfilled multiple roles doing project timekeeping, it support, and software development. This gave me experience in:
+- Prior to that I worked as for a company for almost 8 years where I simultaneously fullfilled multiple roles doing project timekeeping, IT administration/support, and software development. This gave me experience in:
   - Project management.
   - Project timekeeping.
   - Technical support.
@@ -115,15 +115,17 @@ Depending on the timeline of development, the budget may need to be adjusted. I'
 
 As a single full-stack software developer I am able to develop GoalFlow without any additional overhead and the complications of managing multiple developers. This allows me to keep the costs down.
 
-This is the reason why I am only asking for $15,000. It should easily be enough to get the project to a point where it can be released and used by a small number of users and validate it. From here if needed I can request additional funding if needed which supports incremental upscaling.
+This is the reason why I am only asking for $15,000. It should easily be enough to get the project to a point where it can be released and used by a small number of users and validate it. From here if needed I can request additional funding if needed which supports incremental upscaling. If additional funding beyond the $15,000 is possible, it would further help me ensure my ability to continue development and maintain it.
 
 ## Sustainability
 
-After getting GoalFlow into production I can begin marketing it as a SaaS product. In this way I use the revenue to fund future development.
+After getting GoalFlow into production I can begin serving it as a SaaS product. In this way I use the revenue to fund future development.
 
 Due to the benefits of the software and existing demand for it I am confident that I will be able to continue development and maintain it.
 
 ## Strategic Alignment
+
+To get a more detailed explanation of this section you can read [here](/content/docs/EA-Meta/06-why-now.md).
 
 ### "Why this?"
 

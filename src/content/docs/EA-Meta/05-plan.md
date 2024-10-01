@@ -5,6 +5,24 @@ description: Plan
 
 The following is a high level plan for the development and release of GoalFlow.
 
+### Warning
+
+The information below is a grouping of many feature sets and will not necessarily be developed in the order listed.
+
+In order to maximize productivity
+
+- Develop the core data models and functions to work with the data first
+- Develop the UI and UX for the workspaces, navigation, and tables to interact with the data
+- Develop and integrate AI Agents that can generate items and custom fields
+- I'll then use those AI Agents to enter data into the system to build the initial dataset including
+  - Fixed Data Options for various types of data
+  - Initial Navigation structure
+  - Initial List Items
+  - Single Module Items
+  - Single Workflow with BPMN
+
+With these functions build out I'll have a solid foundation to build out the rest of the features in a structured and organized manner.
+
 ## Feature Development
 
 ### 3 Months: MVP.
