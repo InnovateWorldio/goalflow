@@ -3,6 +3,22 @@ title: GoalFlow
 description: GoalFlow
 ---
 
+## 100-word description
+
+GoalFlow is designed as a unified app to replace multiple apps while including
+- Dynamically adapting the software itself to the users needs using AI Agents
+- Supporting a variety of manual or AI driven automations
+- Collaborative and adaptable business process templates and documents
+- AI driven knowledge management
+- App Builder Capabilities
+
+My goal is to help EA Orgs get started faster and increase their impact
+
+My experience running a software development and IT support company where I helped businesses get started with, replace, or integrate multiple software solutions has given me detailed knowledge for what is need and how to build it. 
+
+
+## Additional Information
+
 GoalFlow is designed to be a single application that can replace multiple common apps within one single app while providing sets of additional features used to help users achieve their goals faster, easier, at lower cost, and with less risk.
 
 Beyond most traditional personal and org use cases, GoalFlow has the capability to be used as an App Builder expanding its use cases. Some of these additional use cases are listed in the [Use Cases](/ea-meta/02-use-cases/) section.

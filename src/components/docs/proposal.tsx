@@ -3,6 +3,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { marked } from 'marked';
 
 interface ProposalProps {
   organizationName: string;
@@ -13,16 +14,20 @@ interface ProposalProps {
   dateOfGrant: string;
   duration: string;
   description: string;
-  smartGoals: string[];
+  smartGoals: string;
   measurementPlan: string;
   shutdownCriteria: string;
-  progressSoFar: string[];
-  oneYearPlan: string;
-  biggestSuccess: string;
-  biggestFailures: string;
+  progressSoFar: string;
   supportingDocuments: { name: string; link: string }[];
-  extraInformation: string[];
+  extraInformation: string;
 }
+
+const MarkdownRenderer = ({ content }: { content: string }) => (
+  <div
+    className="text-sm prose dark:prose-invert"
+    dangerouslySetInnerHTML={{ __html: marked(content) }}
+  />
+);
 
 export function ProposalComponent({
   organizationName,
@@ -37,9 +42,6 @@ export function ProposalComponent({
   measurementPlan,
   shutdownCriteria,
   progressSoFar,
-  oneYearPlan,
-  biggestSuccess,
-  biggestFailures,
   supportingDocuments,
   extraInformation,
 }: ProposalProps) {
@@ -53,7 +55,7 @@ export function ProposalComponent({
       <CardContent className="space-y-6">
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
-            <p className="text-sm font-medium">This year's total budget:</p>
+            <p className="text-sm font-medium">Est 1 year budget starting October 1st, 2024:</p>
             <p className="text-lg font-bold">{totalBudget}</p>
           </div>
           <div className="space-y-2">
@@ -73,66 +75,37 @@ export function ProposalComponent({
             <p className="text-lg font-bold">{dateOfGrant}</p>
           </div>
           <div className="space-y-2">
-            <p className="text-sm font-medium">Duration:</p>
+            <p className="text-sm font-medium">Funding Duration:</p>
             <p className="text-lg font-bold">{duration}</p>
           </div>
         </div>
 
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">100-word description:</h3>
-          <p className="text-sm">{description}</p>
+          <MarkdownRenderer content={description} />
         </div>
 
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">
             2024-2025 top <span className="text-cyan-400">SMART</span> goals:
           </h3>
-          <ul className="list-disc list-inside space-y-1">
-            {smartGoals.map((goal, index) => (
-              <li key={index} className="text-sm">
-                {goal}
-              </li>
-            ))}
-          </ul>
+          <MarkdownRenderer content={smartGoals} />
         </div>
 
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">Plan for measuring impact:</h3>
-          <p className="text-sm">{measurementPlan}</p>
+          <MarkdownRenderer content={measurementPlan} />
         </div>
 
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">Signs we should shut down:</h3>
-          <p className="text-sm">{shutdownCriteria}</p>
+          <MarkdownRenderer content={shutdownCriteria} />
         </div>
 
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">Our progress so far:</h3>
-          <ul className="list-disc list-inside space-y-1">
-            {progressSoFar.map((item, index) => (
-              <li key={index} className="text-sm">
-                {item}
-              </li>
-            ))}
-          </ul>
+          <MarkdownRenderer content={progressSoFar} />
         </div>
-
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold">1-year plan:</h3>
-          <p className="text-sm">{oneYearPlan}</p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <h3 className="text-lg font-semibold">Biggest success:</h3>
-            <p className="text-sm">{biggestSuccess}</p>
-          </div>
-          <div className="space-y-2">
-            <h3 className="text-lg font-semibold">Biggest failures:</h3>
-            <p className="text-sm">{biggestFailures}</p>
-          </div>
-        </div>
-
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">Supporting documents:</h3>
           <ul className="list-disc list-inside space-y-1">
@@ -148,13 +121,7 @@ export function ProposalComponent({
 
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">Extra information:</h3>
-          <ul className="list-disc list-inside space-y-1">
-            {extraInformation.map((item, index) => (
-              <li key={index} className="text-sm">
-                {item}
-              </li>
-            ))}
-          </ul>
+          <MarkdownRenderer content={extraInformation} />
         </div>
       </CardContent>
     </Card>
