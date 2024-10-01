@@ -125,7 +125,7 @@ Due to the benefits of the software and existing demand for it I am confident th
 
 ## Strategic Alignment
 
-To get a more detailed explanation of this section you can read [here](/content/docs/EA-Meta/06-why-now.md).
+To get a more detailed explanation of this section you can read [here](/ea-meta/06-why-now/).
 
 ### "Why this?"
 

@@ -5,7 +5,7 @@ description: GoalFlow
 
 GoalFlow is designed to be a single application that can replace multiple common apps within one single app while providing sets of additional features used to help users achieve their goals faster, easier, at lower cost, and with less risk.
 
-Beyond most traditional personal and org use cases, GoalFlow has the capability to be used as an App Builder expanding its use cases. Some of these additional use cases are listed in the [Use Cases](/content/docs/EA-Meta/02-use-cases.md) section.
+Beyond most traditional personal and org use cases, GoalFlow has the capability to be used as an App Builder expanding its use cases. Some of these additional use cases are listed in the [Use Cases](/ea-meta/02-use-cases/) section.
 
 Below is a subset of the features that GoalFlow will provide:
 

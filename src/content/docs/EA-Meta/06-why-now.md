@@ -1,5 +1,5 @@
 ---
-title: Why this? Why now? Why not before?
+title: Why?
 description: Why this? Why now? Why not before?
 ---
 
