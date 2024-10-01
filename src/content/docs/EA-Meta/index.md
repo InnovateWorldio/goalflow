@@ -17,8 +17,6 @@ While GoalFlow might seem like just another app used to support a wide variety o
 
 One of the main benefits of GoalFlow is that it will be built as an open and extensible framework. This will allow anyone to easily add new features and use cases to the platform. This essentially means that the platform will be self-improving and can be used as an application builder.
 
-I provide informaiton used to help funders understand the potential of GoalFlow.
-
 ## Use Cases
 
 This section will provide a set of use cases that GoalFlow will support. It will explain how it can be used to solve a variety of problems individuals and organizations face.
@@ -32,10 +30,6 @@ Finally I'll share some projects that I aim to build using GoalFlow.
 This section provides information about each aspect of the funding requirements mentioned on the EA Post.
 
 I'll also add information for the budget and how it will be used.
-
-## Proposal
-
-This will provide a proposal matching the example proposal format provided on the EA Post.
 
 ## Plan
 

@@ -3,7 +3,10 @@ import starlightPlugin from "@astrojs/starlight-tailwind";
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "!./src/content/docs/**/*", // Exclude src/content/docs directory
+  ],
   theme: {
     extend: {
       borderRadius: {
@@ -122,5 +125,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), starlightPlugin()],
+  plugins: [require("tailwindcss-animate")],
 };

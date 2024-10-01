@@ -1,4 +1,3 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -7,9 +6,10 @@
 :root {
   --sl-color-bg: #17181c;
   --sl-color-bg-sidebar: #17181c;
+  --sl-color-hairline-shade: #24272f;
   --sl-color-accent-low: #131e4f;
   --sl-color-accent: #3447ff;
-  --sl-color-accent-high: #b3c7ff;
+  --sl-color-accent-high: #4070f1;
   --sl-color-white: #ffffff;
   --sl-color-gray-1: #eceef2;
   --sl-color-gray-2: #c0c2c7;
@@ -21,6 +21,7 @@
 }
 /* Light mode colors. */
 :root[data-theme="light"] {
+  --sl-color-bg: #ffffff;
   --sl-color-accent-low: #c7d6ff;
   --sl-color-accent: #364bff;
   --sl-color-accent-high: #182775;

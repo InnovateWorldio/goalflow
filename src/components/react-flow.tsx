@@ -176,32 +176,32 @@ const initialNodes: Node[] = [
 
 const initialEdges: Edge[] = [
   // Connections from Inputs to Outputs
-  { id: "e-A-H", source: "A", target: "H", type: "bezier", animated: true },
-  { id: "e-A-I", source: "A", target: "I", type: "bezier", animated: true },
-  { id: "e-B-J", source: "B", target: "J", type: "bezier", animated: true },
-  { id: "e-C-N", source: "C", target: "N", type: "bezier", animated: true },
-  { id: "e-D-M", source: "D", target: "M", type: "bezier", animated: true },
-  { id: "e-E-K", source: "E", target: "K", type: "bezier", animated: true },
-  { id: "e-F-L", source: "F", target: "L", type: "bezier", animated: true },
-  { id: "e-G-M", source: "G", target: "M", type: "bezier", animated: true },
+  { id: "e-A-H", source: "A", target: "H", type: "default", animated: true },
+  { id: "e-A-I", source: "A", target: "I", type: "default", animated: true },
+  { id: "e-B-J", source: "B", target: "J", type: "default", animated: true },
+  { id: "e-C-N", source: "C", target: "N", type: "default", animated: true },
+  { id: "e-D-M", source: "D", target: "M", type: "default", animated: true },
+  { id: "e-E-K", source: "E", target: "K", type: "default", animated: true },
+  { id: "e-F-L", source: "F", target: "L", type: "default", animated: true },
+  { id: "e-G-M", source: "G", target: "M", type: "default", animated: true },
 
   // Connections from Outputs to Outcomes
-  { id: "e-H-O", source: "H", target: "O", type: "bezier", animated: true },
-  { id: "e-H-P", source: "H", target: "P", type: "bezier", animated: true },
-  { id: "e-I-Q", source: "I", target: "Q", type: "bezier", animated: true },
-  { id: "e-J-O", source: "J", target: "O", type: "bezier", animated: true },
-  { id: "e-K-Q", source: "K", target: "Q", type: "bezier", animated: true },
-  { id: "e-L-R", source: "L", target: "R", type: "bezier", animated: true },
-  { id: "e-M-S", source: "M", target: "S", type: "bezier", animated: true },
-  { id: "e-N-Q", source: "N", target: "Q", type: "bezier", animated: true },
+  { id: "e-H-O", source: "H", target: "O", type: "default", animated: true },
+  { id: "e-H-P", source: "H", target: "P", type: "default", animated: true },
+  { id: "e-I-Q", source: "I", target: "Q", type: "default", animated: true },
+  { id: "e-J-O", source: "J", target: "O", type: "default", animated: true },
+  { id: "e-K-Q", source: "K", target: "Q", type: "default", animated: true },
+  { id: "e-L-R", source: "L", target: "R", type: "default", animated: true },
+  { id: "e-M-S", source: "M", target: "S", type: "default", animated: true },
+  { id: "e-N-Q", source: "N", target: "Q", type: "default", animated: true },
 
   // Connections from Outcomes to Goal
-  { id: "e-O-U", source: "O", target: "U", type: "bezier", animated: true },
-  { id: "e-P-U", source: "P", target: "U", type: "bezier", animated: true },
-  { id: "e-Q-U", source: "Q", target: "U", type: "bezier", animated: true },
-  { id: "e-R-U", source: "R", target: "U", type: "bezier", animated: true },
-  { id: "e-S-U", source: "S", target: "U", type: "bezier", animated: true },
-  { id: "e-T-U", source: "T", target: "U", type: "bezier", animated: true },
+  { id: "e-O-U", source: "O", target: "U", type: "default", animated: true },
+  { id: "e-P-U", source: "P", target: "U", type: "default", animated: true },
+  { id: "e-Q-U", source: "Q", target: "U", type: "default", animated: true },
+  { id: "e-R-U", source: "R", target: "U", type: "default", animated: true },
+  { id: "e-S-U", source: "S", target: "U", type: "default", animated: true },
+  { id: "e-T-U", source: "T", target: "U", type: "default", animated: true },
 ];
 
 const edgeTypes = {
